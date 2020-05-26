@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+@include screen-m {
+  html {
+    font-size: 32px;
+  }
+}
+
+@include screen-l {
+  body {
+    text-align: left;
+  }
+}
+
+.slide {
+  &__testimonial {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: $dark-blue;
+    line-height: 1.6em;
+  }
+
+  &__name {
+    line-height: 1.6em;
+    font-size: 0.93em;
+    font-weight: 500;
+    color: $dark-blue;
+  }
+
+  &__profession {
+    line-height: 1.6em;
+    font-size: 0.93rem;
+    color: $grayish-blue;
+    font-weight: 300;
+  }
+}

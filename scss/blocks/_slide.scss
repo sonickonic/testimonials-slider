@@ -1,0 +1,80 @@
+.slide {
+  padding-top: 3em;
+  padding-bottom: 4.5em;
+
+  background-image: url(../images/pattern-bg.svg),
+    url(../../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: center 1.1em, bottom left;
+  background-size: 90%, 75%;
+
+  &__img {
+    width: 70%;
+    max-width: 33.75rem;
+    margin: auto;
+    border-radius: 0.5em;
+    box-shadow: 0px 15px 20px -5px rgba(97, 97, 158, 0.5);
+  }
+
+  &__testimonial {
+    background-image: url(../images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: center 3.2em;
+    background-size: 3em;
+
+    padding: 4.5em 0 1em;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@include screen-m {
+  .slide {
+    &__img {
+      max-width: 24.5rem;
+    }
+  }
+}
+
+@include screen-l {
+  .slide {
+    max-width: 1444px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    background-position: 93% 1.1em, bottom left;
+    background-size: 48%, 40%;
+
+    &__img {
+      max-width: 33.75rem;
+      margin: 0;
+      width: 100%;
+    }
+
+    &__testimonial {
+      background-position: 3em top;
+      background-size: 3.2em;
+
+      padding: 1.4em 0;
+      padding-bottom: 0;
+      width: 100%;
+      max-width: 22rem;
+      margin: 0;
+      margin-bottom: 1em;
+    }
+
+    &__profession {
+      margin-left: 0.3em;
+    }
+  }
+}
+
+.slide--current {
+  visibility: visible;
+}
+
+.slide--next {
+  display: none;
+}

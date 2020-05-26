@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+@include screen-l {
+  .container--row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container--right {
+    margin-right: -2.5em;
+    justify-content: center;
+  }
+}

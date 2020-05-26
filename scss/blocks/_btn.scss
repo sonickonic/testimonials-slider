@@ -1,0 +1,59 @@
+.btn {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: white;
+    width: 5em;
+    height: 2.5em;
+    border-radius: 2em;
+    margin: auto;
+    margin-top: -1.25em;
+
+    box-shadow: 0px 2px 20px -5px rgba(97, 97, 158, 0.7);
+  }
+
+  &__img {
+    height: 1em;
+  }
+
+  &__prev,
+  &__next {
+    cursor: pointer;
+    height: 1em;
+    border: none;
+    background: none;
+  }
+
+  &__prev:hover,
+  &__next:hover {
+    scale: 1.5;
+  }
+
+  &__prev:focus,
+  &__next:focus {
+    outline: none;
+  }
+}
+
+@include screen-m {
+  .btn {
+    &__img {
+      height: 1.5em;
+      margin-top: -0.25em;
+    }
+  }
+}
+
+@include screen-l {
+  .btn {
+    &__container {
+      width: 4em;
+      height: 2em;
+      margin: 0;
+      margin-top: -1em;
+      margin-left: 2em;
+    }
+  }
+}
